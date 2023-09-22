@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.programming.techie</groupId>
-    <artifactId>spring-reddit-clone</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>spring-reddit-clone</name>
+    <artifactId>spring-pavote</artifactId>
+    <version>0.0.1</version>
+    <name>sspring-pavote</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -178,26 +178,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin> 
-                <artifactId>maven-resources-plugin</artifactId> 
-                <executions> 
-                    <execution> 
-                        <id>copy-resources</id> 
-                        <phase>validate</phase> 
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals> 
-                        <configuration> 
-                            <outputDirectory>${build.directory}/classes/static/</outputDirectory >
-                <resources>
-                <resource>
-                <directory>../resources/static</directory>
-                </resource>
-                </resources>
-                </configuration>
-                </execution>
-                </executions>
-                </plugin>
+            
         </plugins>
     </build>
 
