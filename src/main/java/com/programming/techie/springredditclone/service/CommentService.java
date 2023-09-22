@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -47,7 +48,7 @@ public class CommentService {
         Post post = postRepository.findById(postId).orElseThrow(() -> new PostNotFoundException(postId.toString()));
         return commentRepository.findByPost(post)
                 .stream()
-                .map(commentMapper::mapToDto).toList();
+                .map(commentMapper::mapToDto).collect(Collectors.toList());
     }
 
     public List<CommentsDto> getAllCommentsForUser(String userName) {
@@ -56,7 +57,7 @@ public class CommentService {
         return commentRepository.findAllByUser(user)
                 .stream()
                 .map(commentMapper::mapToDto)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     public boolean containsSwearWords(String comment) {
