@@ -11,11 +11,11 @@
     <groupId>com.programming.techie</groupId>
     <artifactId>spring-pavote</artifactId>
     <version>0.0.1</version>
-    <name>sspring-pavote</name>
+    <name>spring-pavote</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
         <testcontainers.version>1.17.6</testcontainers.version>
     </properties>
